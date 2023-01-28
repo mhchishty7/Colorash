@@ -1,0 +1,42 @@
+.dropdown {
+	.btn {
+		@apply font-normal capitalize;
+	}
+	&.right {
+		@apply dropdown-right;
+	}
+	&.left {
+		@apply dropdown-left;
+		.dropdown-content {
+			@apply left-0;
+		}
+	}
+	&.end {
+		@apply dropdown-end;
+	}
+	&.bottom {
+		@apply dropdown-bottom;
+	}
+	&.top {
+		@apply dropdown-top;
+	}
+}
+
+.menu :where(li) > :where(*:not(ul)) {
+	@apply py-3 text-[15px] capitalize;
+}
+
+.dropdown-content {
+	@apply w-[170px];
+	.disabled {
+		@apply cursor-not-allowed  text-gray-400;
+	}
+}
+
+.menu.navigation a.active {
+	@apply bg-primary-light text-primary-dark font-medium;
+}
+
+.menu.navigation :where(li) > :where(*:not(ul)) {
+	@apply py-4;
+}

@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './dropdown';
+@import './form';
+@import './icon';
+@import './spinner';
+@import './positions';
+@import './animations';
+
+body {
+	box-sizing: border-box;
+	@apply text-fs-1;
+	font-family: 'Roboto', sans-serif;
+}
+
+.noise-bg:before {
+	content: '';
+	display: block;
+	background-image: url('/public/noise.webp');
+	opacity: 0.8;
+	background-repeat: repeat;
+	background-size: 257px auto;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	pointer-events: none;
+	z-index: 99999998;
+}
+
+.modal {
+	background-color: #00000073;
+}
+
+.container {
+	@apply mx-auto px-5 xl:max-w-[1230px] lg:max-w-[1040px] md:max-w-[780px] sm:max-w-[650px] max-w-[490px];
+}

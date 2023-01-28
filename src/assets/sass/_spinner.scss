@@ -1,0 +1,29 @@
+.spinner {
+	@apply h-5 w-5 border border-l-transparent border-gray-200 rounded-full animate-spin;
+}
+
+.spinner.sm {
+	@apply h-4 w-4;
+}
+
+.spinner.md {
+	@apply h-6 w-6;
+}
+
+.spinner.lg {
+	@apply h-8 w-8;
+}
+
+.spinner.xl {
+	@apply h-10 w-10;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+		@apply border-t;
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
